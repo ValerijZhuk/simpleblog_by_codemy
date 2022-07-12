@@ -76,6 +76,7 @@ class AddCommentView(CreateView):
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
+
     # fields = '__all__'
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
